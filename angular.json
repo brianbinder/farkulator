@@ -81,6 +81,10 @@
           "options": {
             "browserTarget": "farkulator:build"
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {}
         }
       }
     }
