@@ -1,0 +1,50 @@
+@import '../../styles.scss';
+
+:host {
+  @include flex-column;
+  // justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+button {
+  max-width: $fullWidth;
+}
+
+.main-column {
+  padding: 12px 0;
+  @include flex-column;
+  flex-grow: 1;
+  justify-content: space-between;
+  width: 100%;
+}
+
+h1.title {
+  color: #673ab7;
+  font-weight: 600;
+  font-size: 24px;
+  text-align: center;
+}
+
+.players {
+  @include desktop-row-mobile-column;
+  width: 100%;
+  justify-content: space-around;
+}
+
+:host.adding-players {
+  .start, .undo {
+    margin: 0 auto;
+    width: $fullWidth
+  }
+}
+
+.bottom-buttons {
+  @include flex-row;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 12px;
+  justify-content: space-between;
+}

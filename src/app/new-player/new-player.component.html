@@ -1,0 +1,12 @@
+<mat-form-field class="new-player-name">
+  <mat-label>New player</mat-label>
+  <input #inputElement
+    matInput
+    type="text"
+    autocomplete="off"
+    appDetectEnter
+    (enterDetected)="attemptPlayerAdd()" />
+</mat-form-field>
+<button mat-raised-button color="accent" class="add-player" (click)="attemptPlayerAdd()">
+  Add player
+</button>

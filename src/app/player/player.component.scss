@@ -1,0 +1,35 @@
+@import '../../styles.scss';
+
+:host {
+  @include desktop-column-mobile-row;
+  align-items: center;
+  @include mobile {
+    flex-direction: row-reverse;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 4px 12px 4px 36px;
+  }
+  &.active {
+    background: rgba(#d1c4e9, 0.8);
+  }
+  &.over-25k:not(.active) {
+    background: rgba(#f8bbd0, 0.8);
+  }
+}
+
+.name {
+  font-size: 24px;
+  font-weight: 600;
+  @include mobile {
+    font-size: 20px;
+  }
+}
+
+.score {
+  font-family: monospace;
+  font-size: 16px;
+  @include mobile {
+    width: 72px;
+    text-align: right;
+  }
+}

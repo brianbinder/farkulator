@@ -1,0 +1,26 @@
+@import '../../styles.scss';
+
+:host {
+  @include flex-row;
+  align-items: center;
+  padding: 12px;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.title {
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+
+button {
+  flex-shrink: 0;
+  box-sizing: border-box;
+  width: 78px;
+}
+
+button.bank {
+  padding: 0 8px;
+  width: 90px;
+  margin-right: 4px;
+}
