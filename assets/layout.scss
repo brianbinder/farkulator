@@ -1,0 +1,32 @@
+// https://itnext.io/writing-media-queries-with-sass-mixins-3ea591ea3ea4
+$mobile-cut-off-width: 420px;
+@mixin mobile {
+  @media (max-width: $mobile-cut-off-width) { @content; }
+}
+
+@mixin flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+
+@mixin desktop-column-mobile-row {
+  @include flex-column;
+  @include mobile {
+    @include flex-row;
+  }
+}
+
+@mixin desktop-row-mobile-column {
+  @include flex-row;
+  @include mobile {
+    @include flex-column;
+  }
+}
+
+$fullWidth: calc(100vw - 16px);
