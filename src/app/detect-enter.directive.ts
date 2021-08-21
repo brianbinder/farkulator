@@ -10,7 +10,7 @@ export class DetectEnterDirective {
 
   @HostListener('keyup', ['$event'])
   handleKeyUpOnComponent(e: KeyboardEvent): void {
-    if (e.code === `Enter` || e.code === `NumpadEnter`) {
+    if (e.code === `Enter` || e.code === `NumpadEnter` || e.keyCode === 13) {
       this.enterDetected.next(e);
     }
   }
