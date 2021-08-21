@@ -1,7 +1,0 @@
-@import '../../styles.scss';
-
-:host {
-  @include flex-column;
-  width: $fullWidth;
-  margin: 0 auto;
-}
